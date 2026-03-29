@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
-:root {
+@theme {
   --font-playfair: "Playfair Display", serif;
   --font-inter: "Inter", sans-serif;
-  
-  /* Color palette MyFam */
+
   --color-cream: #FDF6EC;
-  --color-rose: #F2C4CE;
+  --color-rose-soft: #F2C4CE;
   --color-sage: #C8D5B9;
   --color-warm: #E8DDD0;
 }
@@ -31,20 +30,49 @@ h1, h2, h3 {
   font-family: var(--font-playfair);
 }
 
-/* Scrollbar custom */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #FDF6EC;
-}
-::-webkit-scrollbar-thumb {
-  background: #F2C4CE;
-  border-radius: 999px;
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FDF6EC; }
+::-webkit-scrollbar-thumb { background: #F2C4CE; border-radius: 999px; }
+::selection { background: #F2C4CE; color: #333; }
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
-/* Selection color */
-::selection {
-  background: #F2C4CE;
-  color: #333;
+/* Animasi nama berputar */
+.words {
+  overflow: hidden;
+  height: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.words .text-black {
+  display: flex;
+  flex-direction: column;
+  animation: spin_words 8s infinite;
+}
+
+.word {
+  display: block;
+  line-height: 1.2em;
+  white-space: nowrap;
+}
+
+@keyframes spin_words {
+  0%   { transform: translateY(0%); }
+  18%  { transform: translateY(0%); }
+  20%  { transform: translateY(-20%); }
+  38%  { transform: translateY(-20%); }
+  40%  { transform: translateY(-40%); }
+  58%  { transform: translateY(-40%); }
+  60%  { transform: translateY(-60%); }
+  78%  { transform: translateY(-60%); }
+  80%  { transform: translateY(-80%); }
+  98%  { transform: translateY(-80%); }
+  100% { transform: translateY(0%); }
 }

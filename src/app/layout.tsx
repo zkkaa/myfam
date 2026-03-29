@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MyFam",
+  title: "MyFam 🏡",
   description: "Website keluarga kami yang penuh cinta",
 };
 
@@ -25,7 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
-      <body className={`${playfair.variable} ${inter.variable} antialiased`}>
+      <body
+        className={`${playfair.variable} ${inter.variable} antialiased`}
+        style={{ fontFamily: "var(--font-inter)" }}
+      >
         {children}
       </body>
     </html>
