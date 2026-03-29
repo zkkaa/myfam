@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MyFam 🏡",
+  title: "MyFam",
   description: "Website keluarga kami yang penuh cinta",
 };
 
